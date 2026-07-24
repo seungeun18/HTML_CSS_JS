@@ -143,6 +143,9 @@ button {
 
 .car-card {
   /* TODO: [car-card] 수강생 구현 #7 */
+  display:grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 12px;
   
 }
 
