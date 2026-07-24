@@ -31,7 +31,9 @@ body {
 
   /* 입력 영역과 목록 영역을 2열로 배치한다. */
   /* TODO: [입력 영역 / 목록 영역 2열 배치 ] 수강생 구현 #1 */
-
+  display : grid;
+  grid-template-columns: 360px 1fr;
+  gap: 24px;
 }
 
 .form-card,
@@ -55,11 +57,14 @@ body {
 
 .form-row {
   /* TODO: [form -row] 수강생 구현 #2 */
+  display: grid;
+  gap: 6px;
  
 }
 
 .form-row label {
   /* TODO: [form-row lable] 수강생 구현 #3 */
+  font-weight:700;
   
 }
 
@@ -85,6 +90,9 @@ select:focus {
 
 .button-area {
   /* TODO: [button-area] 수강생 구현 #4 */
+  display:flex;
+  gap:8px;
+  margin-top:8px
   
 }
 
@@ -118,11 +126,18 @@ button {
 
 .search-area {
   /* TODO: [search-area] 수강생 구현 #5 */
+  display:grid;
+  grid-template-columns: 1fr 160px;
+  gap: 10px;
+  margin: bottom 18px;
  
 }
 
 .car-list {
   /* TODO: [car-list] 수강생 구현 #6 */
+  display:grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 12px;
   
 }
 
@@ -171,11 +186,17 @@ button {
 
 .card-actions {
   /* TODO: [car-actions] 수강생 구현 #8 */
+  display:flex;
+  gap:8px;
+  margin-top:14px;
+
   
 }
 
 .card-actions button {
   /* TODO: [card-actions button] 수강생 구현 #9 */
+  flex:1;
+  background-color: #bfdbfe;
  
 }
 
@@ -195,5 +216,13 @@ button {
 /* 화면이 좁아지면 1열로 변경한다. */
 @media (max-width: 800px) {
   /* TODO: [1열 변경] 수강생 구현 #10 */
- 
+  .container {
+    grid-template: 1fr;
+  }
+  .car-list{
+    grid-template-columns: 1fr;
+  }
+  .search-area {
+    grid-template-columns: 1fr;
+  }
 }
